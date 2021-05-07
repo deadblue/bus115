@@ -33,6 +33,7 @@
 
   "permissions": [
     "<all_urls>",
+    "cookies",
     "downloads",
     "storage",
     "tabs"

@@ -12,11 +12,7 @@
             }
             go.argv.push(cb);
             WebAssembly.instantiateStreaming(fetch(codeUrl), go.importObject).then(result => {
-                try {
-                    go.run(result.instance);
-                } catch (e) {
-                    reject(e);
-                }
+                go.run(result.instance);
             }).catch(reason => {
                 reject(reason);
             });
